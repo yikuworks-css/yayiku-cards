@@ -1,9 +1,9 @@
-# Yaiku Cards
+# Yayiku Cards
 
 A drag-and-drop card board. Make cards, drag one onto another, and they fuse into a
 bundle — a single container holding both. Cards you leave alone stay alone.
 
-**Live:** https://yikuworks-css.github.io/yaiku-cards/
+**Live:** https://yikuworks-css.github.io/yayiku-cards/
 
 No build step, no dependencies, no server, no account. One HTML file. Open it and it runs.
 
@@ -77,7 +77,7 @@ Card   { id, kind: 'card',   title, desc }
 Bundle { id, kind: 'bundle', name, collapsed, renamed, children: [Card] }
 ```
 
-Board state is one ordered array of these, in `localStorage` under `yaiku-cards-v1`.
+Board state is one ordered array of these, in `localStorage` under `yayiku-cards-v1`.
 
 ## Known limits
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yaiku Cards</title>
+<title>Yayiku Cards</title>
 <style>
 :root{
   --bg:#0d1117; --bg-soft:#11161d; --panel:#161b22;
@@ -209,7 +209,7 @@ header.top{
 <body>
 
 <header class="top">
-  <div class="brand"><h1>Yaiku Cards</h1><span>drag · drop · bundle</span></div>
+  <div class="brand"><h1>Yayiku Cards</h1><span>drag · drop · bundle</span></div>
   <button class="btn primary" id="newBtn">+ New card</button>
   <button class="btn" id="exportBtn">Export</button>
   <button class="btn" id="importBtn">Import</button>
@@ -240,7 +240,7 @@ header.top{
 (function(){
 'use strict';
 
-const KEY='yaiku-cards-v1';
+const KEY='yayiku-cards-v1';
 const SPRING='cubic-bezier(.34,1.4,.64,1)';
 const board=document.getElementById('board');
 const modal=document.getElementById('modal');
@@ -632,7 +632,7 @@ document.getElementById('exportBtn').addEventListener('click',()=>{
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob);
   const a=document.createElement('a');
-  a.href=url; a.download='yaiku-cards-'+new Date().toISOString().slice(0,10)+'.json';
+  a.href=url; a.download='yayiku-cards-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),1500);
 });
@@ -646,7 +646,7 @@ fileIn.addEventListener('change',()=>{
       const s=JSON.parse(String(r.result));
       if(!s||!Array.isArray(s.items)) throw new Error('bad file');
       state=s; render(true);
-    }catch(err){ alert('That file could not be read as a Yaiku Cards export.'); }
+    }catch(err){ alert('That file could not be read as a Yayiku Cards export.'); }
     fileIn.value='';
   };
   r.readAsText(f);
